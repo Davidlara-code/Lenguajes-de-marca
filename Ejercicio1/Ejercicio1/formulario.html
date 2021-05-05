@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Heraldo de ITT - Subscripción</title>
+    <link rel="stylesheet" href="C:\Users\DAVID\Desktop\Ejercicio1\Ejercicio1\archivo de hoja de estilo.css">
+</head>
+<body>
+    
+    <header>
+        <img src="img\LOGO.jpg" alt="Logo principal">
+    </header>
+
+    <nav>
+        <div id="navegador">
+            <ul>
+                <li><a href="Homeejer.html">Home</a></li>
+                <li><a href="Quienes somos.html">¿Quienes Somos?</a></li>
+            <li><a href="#">Noticias</a>
+            <ul><li><a href="">Nacional</a></li>
+                <li><a href="">Internacional</a></li>
+                <li><a href="">Deportes</a></li></ul>
+            </li>
+            <li><a href="#">Publicaciones</a></li>
+            <li><a href="areas_actua.html">Areas</a></li>
+            <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+            </div>
+    </nav>
+
+    <form action="inscripcion.jsp" method=post name=formulario>
+    <fieldset id="formulario"><legend id="legend">FORMULARIO DE INSCRIPCIÓN</legend>
+
+        <div id="datos">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="ape" placeholder="Introduzca sus apellidos" autofocus required>
+            
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nom" placeholder="Introduzca su nombre" required>
+            <br><br>
+
+            <label for="dni">DNI</label>
+            <input type="text" id="dni" name="dni" placeholder="Introduzca DNI">
+            <br><br>
+
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="nacimiento" name="nacimiento" placeholder="dd/mm/aaaa" required>
+            <br><br>
+
+            <label for="ciudad">Ciudad</label>
+            <select name="ciudad" id="ciudad">
+                <option value="seleccione">---Seleccione---</option>
+                <option value="and">Andalucía</option>
+                <option value="ara">Aragón</option>
+                <option value="ast">Asturias</option>
+                <option value="bal">Islas Baleares</option>
+                <option value="islascan">Canarias</option>
+                <option value="Can">Cantabria</option>
+                <option value="mancha">Castilla La Mancha</option>
+                <option value="leon">Castilla y León</option>
+                <option value="cat">Cataluña</option>
+                <option value="val">Valencia</option>
+                <option value="ext">Extremadura</option>
+                <option value="gal">Galicia</option>
+                <option value="rio">La Rioja</option>
+                <option value="mad">Madrid</option>
+                <option value="mur">Murcia</option>
+                <option value="nav">Navara</option>
+                <option value="vas">País Vasco</option>
+                <option value="ceu">Ceuta</option>
+                <option value="mel">Melilla</option>
+            </select>
+            
+            <label for="codpos">Código Postal</label>
+            <input type="number" id="codpos" name="codpos" placeholder="Introduzca su Código Postal">
+            <br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="ej: mimail90@mail.com" required>
+            
+
+            <label for="tel">Teléfono</label>
+            <input type="tel" id="tel" name="tel" placeholder="Introduzca su teléfono">
+            <br><br>
+        </div>
+
+        <div id="resto">
+            <label for="frecuencia">¿Con qué frecuencia desea recibir noticias?</label><br><br>
+            <input type="radio" name="frecuencia" id="frecuencia" value="variosdia">Varias veces al día <br>
+            <input type="radio" name="frecuencia" id="frecuencia" value="dia">Diariamente <br>
+            <input type="radio" name="frecuencia" id="frecuencia" value="sem">Semanalmente <br>
+            <input type="radio" name="frecuencia" id="frecuencia" value="men">Mensualmente <br>
+            <br><br>
+
+            <label for="intereses">Seleccione los temas sobre los que le gustaría recibir noticias</label><br><br>
+            <input type="checkbox" name="intereses" value="pol">Política Nacional <br>
+            <input type="checkbox" name="intereses" value="polint">Política Internacional <br>
+            <input type="checkbox" name="intereses" value="eco">Economía<br>
+            <input type="checkbox" name="intereses" value="cie">Ciencia<br>
+            <input type="checkbox" name="intereses" value="mus">Música<br>
+            <input type="checkbox" name="intereses" value="dep">Deporte<br>
+            <input type="checkbox" name="intereses" value="cot">Cotilleo<br>
+            <input type="checkbox" name="intereses" value="eve">Eventos<br>
+            <input type="checkbox" name="intereses" value="tec">Tecnología<br>
+            <input type="checkbox" name="intereses" value="bol">Bolsa<br>
+            <input type="checkbox" name="intereses" value="oci">Ocio<br>
+            <input type="checkbox" name="intereses" value="vid">Videojuegos<br>
+            <br><br>
+
+            <label for="web">Sitio web personal o de tu empresa (opcional)</label>
+            <input type="url" id="web" name="web" placeholder="Introduzca URL">
+            <br><br>
+
+            <label for="color">Color favorito</label>
+            <input type="color" id="color" name="color">
+            <br><br>
+
+            <label for="pass">Contraseña</label>
+            <input type="password" id="pass" name="pass" placeholder="Introduzca contraseña">
+            <br><br>
+
+            <label for="confirm">Confirme contraseña</label>
+            <input type="password" id="confirm" name="confirm" placeholder="Confirme contraseña">
+            <br><br>
+
+            <label for="area">Observaciones</label>
+            <br/>	
+            <textarea rows="10" cols="100" name="area"></textarea>
+            <br><br>
+
+            <label for="terminos">¿Acepta los términos de uso de su información?</label>
+            <br/><br>
+            He leído y acepto los términos de uso <input type="checkbox" name="terminos" value="Y" />
+            <br><br>
+
+            <input type="submit" id ="enviar" value="Enviar"/> <input type="reset" id="reset" value="Reiniciar campos" />
+        </div>
+    </fieldset>
+    </form>
+
+    
+
+</body>
+</html>
+
