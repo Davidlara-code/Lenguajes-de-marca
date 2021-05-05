@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formularios</title>
+    
+</head>
+
+    
+ <style type="text/css">  
+.registroFormulario {
+width: 400px;
+background: #24303c;
+padding: 30px;
+font-family: 'calibri' ;
+}
+
+.campos { 
+    font-family:verdana,arial;     /* tipo de letra */ 
+    width: 500px;                 /* anchura de campos de formulario */ 
+    font-size:8pt;                /* tamaño de la letra*/  
+    color:#0000FF;     /* color del texto */  
+    border: 1px dotted red;        /* color del borde puede ser solid ó dotted */  
+    background-color: dotted red;    /* color del fondo */  
+} 
+
+.boton{
+    font-size:12px;
+    font-family:Verdana,Helvetica;
+    font-weight:bold;
+    color:#0000FF;
+    background:#A4C1FF;
+    border:0px;
+    width: 180px;
+    height:25px;
+}
+
+
+</style> 
+
+
+<body>
+    <section class="registroFormulario">
+    <h1> Formulario de contacto</h1>
+    <form action="procesarPeticion.jsp" method="get">
+        
+
+        <fieldset><legend>Datos personales:</legend>
+            <ol>
+
+           <li> <label for="nombre">Nombre*: </label>
+            <input class="campos" id="nombre" type="text" name="nombre" placeholder="Campo obligatorio" required /> </li>
+            <br />
+            <li><label for="Apellido1">Primer Apellido*: </label>
+            <input id="Apellido1" type="text" name="Apellido1" placeholder="Campo obligatorio" required/> </li>
+            <br />
+            <li> <label for="Apellido2">Segundo Apellido: </label>
+            <input id="Apellido2" type="text" name="Apellido2"/> </li>
+            <br />
+            <li> <label for="edad">Edad: </label>
+            <input id="edad" type="number" min="18" max="100" name="edad" /> </li>
+            <br />
+            <li><label for="ciudad">Ciudad: </label>
+            <input id="ciudad" type="text" name="ciudad" /> </li>
+            <br/>
+            <li><label for="e-mail">E-mail*: </label>
+            <input id="e-mail" type="e-mail" name="e-mail" placeholder="Campo obligatorio" required/> </li>
+        </ol>
+            <br/>
+            <br/> 
+            <label for="Área de consulta">Área de consulta: </label>
+            <br />	
+            <input type="checkbox" name="Área de consulta" value="N" checked/>Nacional<br />	
+            <input type="checkbox" name="Área de consulta" value="I" />Internacional<br />	
+            <input type="checkbox" name="Área de consulta" value="D" />Deportes<br />	
+            <input type="checkbox" name="Área de consulta" value="C" />Cultura<br />	
+            <input type="checkbox" name="Área de consulta" value="O" />Otra<br />	
+            <label for="consulta">Tipo de consulta que quiere hacer: </label>
+            <select name="consulta">
+                <option value="Queja">Queja</option>
+                <option value="Sugerencia">Sugerencia</option>
+                <option value="Opinion" selected>Opinion</option>
+                <option value="Comercial">Comercial</option>
+                <option value="Felicitación">Felicitación</option>
+                <option value="Otra">Otra</option>
+                
+            <br/>
+            <br/>    
+            </select>
+            <br />
+            <br/>
+            <label for="observaciones">Observaciones: </label>
+            <br />	
+            <textarea rows="5" cols="80" name="observaciones"  maxlength="300" placeholder="describe brevemente en menos de 300 carácteres"></textarea>
+            <br/>
+            <br/>
+            <label for="terminos">Acepta los terminos de uso? </label>
+            <br/>	
+            He leido y acepto los terminos de uso <input type="checkbox" name="terminos" value="Y" />
+            <br/>	
+            <br/>	
+            <input class="boton" type="submit" value="Enviar datos" />
+            <input class="boton" type="reset" value="Limpiar formulario" />
+        </fieldset>
+    </form>
+    </section>
+</body>
+</html>
